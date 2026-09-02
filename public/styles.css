@@ -54,6 +54,7 @@ header p {
 
 .card {
   max-width: 480px;
+  min-width: 380px;
   margin: 0 auto;
   background: #fff;
   border-radius: 12px;
@@ -83,6 +84,7 @@ header p {
 #express-checkout-element {
   margin: 24px 0 8px;
   min-height: 44px;
+  min-width: 300px;
 }
 
 #error-message {
