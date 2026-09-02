@@ -1,4 +1,5 @@
 require('dotenv').config();
+const path = require('path');
 const express = require('express');
 const Stripe = require('stripe');
 
@@ -12,7 +13,7 @@ const DEMO_AMOUNT = 1999; // $19.99
 const DEMO_CURRENCY = 'usd';
 
 app.use(express.json());
-app.use(express.static('public'));
+app.use(express.static(path.join(__dirname, 'public')));
 
 app.get('/config', (req, res) => {
   res.json({ publishableKey: process.env.STRIPE_PUBLISHABLE_KEY });
