@@ -54,6 +54,7 @@ async function init() {
   const expressCheckoutElement = elements.create('expressCheckout', {
     emailRequired: true,
     phoneNumberRequired: true,
+    layout: { maxColumns: 1 },
   });
   expressCheckoutElement.mount('#express-checkout-element');
 
