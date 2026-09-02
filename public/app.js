@@ -47,7 +47,7 @@ async function init() {
 
   const elements = stripe.elements({
     mode: 'payment',
-    amount: 1999,
+    amount: 1,
     currency: 'usd',
   });
 
