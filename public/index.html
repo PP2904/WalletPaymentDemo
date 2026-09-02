@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Apple Pay / Google Pay — Express Checkout Element Demo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="styles.css" />
+  <script src="https://js.stripe.com/v3/"></script>
+</head>
+<body>
+  <header>
+    <h1>Wallet Payments Demo — Express Checkout Element</h1>
+    <p>What comes back after Apple Pay / Google Pay finalizes a payment, and exactly when it arrives — all of it synchronous, client-side</p>
+  </header>
+
+  <div class="layout">
+    <div class="flow-pane">
+      <div class="card">
+        <div class="step-indicator">
+          <div class="step active" id="step-1">1. Pay</div>
+          <div class="step" id="step-2">2. Confirm (sync)</div>
+          <div class="step" id="step-3">3. Finalized (sync)</div>
+        </div>
+
+        <h2>MavOS Demo Widget</h2>
+        <div class="line-item">
+          <span>1x Demo Widget</span>
+          <span>$19.99</span>
+        </div>
+        <div class="line-item total">
+          <span>Total</span>
+          <span>$19.99</span>
+        </div>
+
+        <div id="express-checkout-element"></div>
+        <div id="error-message"></div>
+
+        <div class="summary-box" id="summary-box">
+          <h3>Data returned after payment finalized</h3>
+          <div id="summary-rows"></div>
+        </div>
+
+        <button class="reset-btn" id="reset-btn" style="display:none;">Run demo again</button>
+      </div>
+    </div>
+
+    <div class="log-pane">
+      <h2>API requests / responses</h2>
+      <div id="log"></div>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
