@@ -1,5 +1,6 @@
 {
   "rewrites": [
+    { "source": "/", "destination": "/index.html" },
     { "source": "/config", "destination": "/api/index" },
     { "source": "/create-intent", "destination": "/api/index" },
     { "source": "/payment-intent/:id", "destination": "/api/index" }
