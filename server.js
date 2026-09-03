@@ -9,7 +9,7 @@ const PORT = process.env.PORT || 4242;
 
 // Demo line item — fixed on purpose so the amount shown in the wallet sheet
 // always matches what's charged (Stripe requires this to match server-side).
-const DEMO_AMOUNT = 1999; // $19.99
+const DEMO_AMOUNT = 100; // $1.00
 const DEMO_CURRENCY = 'usd';
 
 app.use(express.json());
